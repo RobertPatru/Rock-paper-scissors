@@ -4,7 +4,7 @@ document.querySelector('.container').addEventListener("click", function (object)
 
     let playerPick = object.target.parentElement;
     console.log(playerPick);
-
+    computerPick = 1;
 
     // Play Chooces Paper
     if (playerPick.classList.contains('btn-paper-player') && computerPick == 1) {
@@ -45,8 +45,9 @@ document.querySelector('.container').addEventListener("click", function (object)
     else if (playerPick.classList.contains('btn-rock-player') && computerPick == 1) {
         getMessage('Paper beats Rock! Computer Wins!', 'red');
 
-        deleteFromUI('.computer-paper-img', '-500px');
+        deleteFromUI('.computer-rock-img', '500px');
         deleteFromUI('.computer-scissors-img', '500px');
+        moveSelectedElementToCenter('.computer-paper-img', '220px');
 
         deleteFromUI('.player-paper-img', '-500px');
         deleteFromUI('.player-scissors-img', '500px');
