@@ -4,7 +4,7 @@ document.querySelector('.container').addEventListener("click", function (object)
 
     let playerPick = object.target.parentElement;
     console.log(playerPick);
-    computerPick = 1;
+  
 
     // Play Chooces Paper
     if (playerPick.classList.contains('btn-paper-player') && computerPick == 1) {
